@@ -12,6 +12,7 @@
 		9716CE491F8D6DBF00393EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE471F8D6DBF00393EAE /* Main.storyboard */; };
 		9716CE4B1F8D6DBF00393EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */; };
 		9716CE4E1F8D6DBF00393EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE4C1F8D6DBF00393EAE /* LaunchScreen.storyboard */; };
+		9716CE591F8D724D00393EAE /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716CE581F8D724D00393EAE /* ExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9716CE4D1F8D6DBF00393EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9716CE4F1F8D6DBF00393EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9716CE581F8D724D00393EAE /* ExpenseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseView.swift; path = ../ExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		9716CE421F8D6DBF00393EAE /* censeo */ = {
 			isa = PBXGroup;
 			children = (
-				9716CE431F8D6DBF00393EAE /* AppDelegate.swift */,
+				9716CE551F8D6DC700393EAE /* Supporting Files */,
 				9716CE451F8D6DBF00393EAE /* ViewController.swift */,
+				9716CE581F8D724D00393EAE /* ExpenseView.swift */,
 				9716CE471F8D6DBF00393EAE /* Main.storyboard */,
+			);
+			path = censeo;
+			sourceTree = "<group>";
+		};
+		9716CE551F8D6DC700393EAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9716CE431F8D6DBF00393EAE /* AppDelegate.swift */,
 				9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */,
 				9716CE4C1F8D6DBF00393EAE /* LaunchScreen.storyboard */,
 				9716CE4F1F8D6DBF00393EAE /* Info.plist */,
 			);
-			path = censeo;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				9716CE461F8D6DBF00393EAE /* ViewController.swift in Sources */,
 				9716CE441F8D6DBF00393EAE /* AppDelegate.swift in Sources */,
+				9716CE591F8D724D00393EAE /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

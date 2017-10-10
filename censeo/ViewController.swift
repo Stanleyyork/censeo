@@ -9,17 +9,70 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var expenseRecord: UILabel!
+    
+    var expenseRecordValue: String {
+        get {
+            return String(expenseRecord.text!)!
+        }
+        set {
+            expenseRecord.text = String(newValue)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBOutlet weak var expenseView: ExpenseView! {
+        didSet {
+            let swipeLeftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rateAsAOne))
+            swipeLeftRecognizer.direction = .left
+            expenseView.addGestureRecognizer(swipeLeftRecognizer)
+            
+            let swipeUpRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rateAsATwo))
+            swipeUpRecognizer.direction = .up
+            expenseView.addGestureRecognizer(swipeUpRecognizer)
+            
+            let swipeRightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rateAsAThree))
+            swipeRightRecognizer.direction = .right
+            expenseView.addGestureRecognizer(swipeRightRecognizer)
+            
+            let swipeDownRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rateLater))
+            swipeDownRecognizer.direction = .down
+            expenseView.addGestureRecognizer(swipeDownRecognizer)
+            
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(moreDetails))
+            tapRecognizer.numberOfTapsRequired = 1
+            expenseView.addGestureRecognizer(tapRecognizer)
+        }
     }
+    
+    func changeText(){
 
-
+    }
+    
+    func rateAsAOne(){
+        print("Rated One")
+        changeText()
+    }
+    
+    func rateAsATwo(){
+        print("Rated Two")
+        changeText()
+    }
+    
+    func rateAsAThree(){
+        print("Rated Three")
+        changeText()
+    }
+    
+    func rateLater(){
+        print("Rate Later")
+        changeText()
+    }
+    
+    func moreDetails(){
+        print("More Details")
+        changeText()
+    }
+    
 }
 
