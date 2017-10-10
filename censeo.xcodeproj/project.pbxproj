@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9716CE441F8D6DBF00393EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716CE431F8D6DBF00393EAE /* AppDelegate.swift */; };
+		9716CE461F8D6DBF00393EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716CE451F8D6DBF00393EAE /* ViewController.swift */; };
+		9716CE491F8D6DBF00393EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE471F8D6DBF00393EAE /* Main.storyboard */; };
+		9716CE4B1F8D6DBF00393EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */; };
+		9716CE4E1F8D6DBF00393EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9716CE4C1F8D6DBF00393EAE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9716CE401F8D6DBF00393EAE /* censeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = censeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9716CE431F8D6DBF00393EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9716CE451F8D6DBF00393EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9716CE481F8D6DBF00393EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9716CE4D1F8D6DBF00393EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9716CE4F1F8D6DBF00393EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9716CE3D1F8D6DBF00393EAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9716CE371F8D6DBF00393EAE = {
+			isa = PBXGroup;
+			children = (
+				9716CE421F8D6DBF00393EAE /* censeo */,
+				9716CE411F8D6DBF00393EAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9716CE411F8D6DBF00393EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9716CE401F8D6DBF00393EAE /* censeo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9716CE421F8D6DBF00393EAE /* censeo */ = {
+			isa = PBXGroup;
+			children = (
+				9716CE431F8D6DBF00393EAE /* AppDelegate.swift */,
+				9716CE451F8D6DBF00393EAE /* ViewController.swift */,
+				9716CE471F8D6DBF00393EAE /* Main.storyboard */,
+				9716CE4A1F8D6DBF00393EAE /* Assets.xcassets */,
+				9716CE4C1F8D6DBF00393EAE /* LaunchScreen.storyboard */,
+				9716CE4F1F8D6DBF00393EAE /* Info.plist */,
+			);
+			path = censeo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9716CE3F1F8D6DBF00393EAE /* censeo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9716CE521F8D6DBF00393EAE /* Build configuration list for PBXNativeTarget "censeo" */;
+			buildPhases = (
+				9716CE3C1F8D6DBF00393EAE /* Sources */,
+				9716CE3D1F8D6DBF00393EAE /* Frameworks */,
+				9716CE3E1F8D6DBF00393EAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = censeo;
+			productName = censeo;
+			productReference = 9716CE401F8D6DBF00393EAE /* censeo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9716CE381F8D6DBF00393EAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Stanley Stevens";
+				TargetAttributes = {
+					9716CE3F1F8D6DBF00393EAE = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 977698P725;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9716CE3B1F8D6DBF00393EAE /* Build configuration list for PBXProject "censeo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9716CE371F8D6DBF00393EAE;
+			productRefGroup = 9716CE411F8D6DBF00393EAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9716CE3F1F8D6DBF00393EAE /* censeo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9716CE3E1F8D6DBF00393EAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9716CE4E1F8D6DBF00393EAE /* LaunchScreen.storyboard in Resources */,
+				9716CE4B1F8D6DBF00393EAE /* Assets.xcassets in Resources */,
+				9716CE491F8D6DBF00393EAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9716CE3C1F8D6DBF00393EAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9716CE461F8D6DBF00393EAE /* ViewController.swift in Sources */,
+				9716CE441F8D6DBF00393EAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9716CE471F8D6DBF00393EAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9716CE481F8D6DBF00393EAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9716CE4C1F8D6DBF00393EAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9716CE4D1F8D6DBF00393EAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9716CE501F8D6DBF00393EAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9716CE511F8D6DBF00393EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9716CE531F8D6DBF00393EAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 977698P725;
+				INFOPLIST_FILE = censeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stanley.stevens.iii.censeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9716CE541F8D6DBF00393EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 977698P725;
+				INFOPLIST_FILE = censeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = stanley.stevens.iii.censeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9716CE3B1F8D6DBF00393EAE /* Build configuration list for PBXProject "censeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9716CE501F8D6DBF00393EAE /* Debug */,
+				9716CE511F8D6DBF00393EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9716CE521F8D6DBF00393EAE /* Build configuration list for PBXNativeTarget "censeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9716CE531F8D6DBF00393EAE /* Debug */,
+				9716CE541F8D6DBF00393EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9716CE381F8D6DBF00393EAE /* Project object */;
+}
