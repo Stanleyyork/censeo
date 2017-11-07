@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var currentRecordId: String = "0"
     var currentRecordDetails: String = ""
+    var i = 0
     
     @IBOutlet weak var expenseView: ExpenseView! {
         didSet {
@@ -50,26 +51,39 @@ class ViewController: UIViewController {
         let url = URL(string: "http://www.alexandriaai.com/api/expenses")!
         let task = session.dataTask(with: url) { (data, _, _) -> Void in
             if let data = data {
-                let string = String(data: data, encoding: String.Encoding.utf8)
-                let currentRecord = self.convertToDictionary(text: string!)
                 
-                let currentRecordIdCasted = currentRecord?["id"] as? String ?? "Null"
-                self.currentRecordId = currentRecordIdCasted
+                do {
+                    let parsedData = try JSONSerialization.jsonObject(with: data, options: []) as! [String:AnyObject]
+                    let expenses = parsedData["expenses_array"] as? [[String:AnyObject]]
+                    let currentRecord = expenses?.first
+                    let currentRecordIdCasted = currentRecord?["id"] as? String ?? "Null"
+                    self.currentRecordId = currentRecordIdCasted
+                    
+                    let currentRecordTitle = currentRecord?["description"] as? String ?? "Null"
+                    self.setTitleText(text: currentRecordTitle)
+                        
+                    let currentRecordCost = currentRecord?["amount"] as? String ?? "Null"
+                    self.setCostText(text: currentRecordCost)
+                        
+                    let orig_description: String? = currentRecord?["original_description"] as? String ?? "Null"
+                    let category: String? = currentRecord?["category"] as? String ?? "Null"
+                    let date: String? = currentRecord?["date"] as? String ?? "Null"
+                        
+                    self.currentRecordDetails = String("\(orig_description!), \(category!), \(date!)")
+                } catch  {
+                    print(error)
+                }
                 
-                let currentRecordTitle = currentRecord?["description"] as? String ?? "Null"
-                self.setTitleText(text: currentRecordTitle)
-                
-                let currentRecordCost = currentRecord?["amount"] as? String ?? "Null"
-                self.setCostText(text: currentRecordCost)
-                
-                let orig_description: String? = currentRecord?["original_description"] as? String ?? "Null"
-                let category: String? = currentRecord?["category"] as? String ?? "Null"
-                let date: String? = currentRecord?["date"] as? String ?? "Null"
-                
-                self.currentRecordDetails = String("\(orig_description!), \(category!), \(date!)")
             }
         }
         task.resume()
+    }
+    
+    func setNext(){
+        let currentRecord = expenses[i]
+        setTitleText(text: currentRecord)
+        setCostText(text: currentRecord)
+        i = i + 1
     }
     
     func setTitleText(text: String){
@@ -96,38 +110,27 @@ class ViewController: UIViewController {
     
     func rateAsAOne(){
         setRatedAs(text: "1")
-        getRecordViaApi()
+        setNext()
     }
     
     func rateAsATwo(){
         setRatedAs(text: "2")
-        getRecordViaApi()
+        setNext()
     }
     
     func rateAsAThree(){
         setRatedAs(text: "3")
-        getRecordViaApi()
+        setNext()
     }
     
     func rateLater(){
         setRatedAs(text: "Later")
-        getRecordViaApi()
+        setNext()
     }
     
     func moreDetails(){
         setRatedAs(text: "...")
-        setDetailsText()
-    }
-    
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        return nil
+        setNext()
     }
 }
 

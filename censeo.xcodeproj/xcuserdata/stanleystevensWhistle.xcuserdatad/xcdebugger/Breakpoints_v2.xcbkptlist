@@ -10,45 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "censeo/ViewController.swift"
-            timestampString = "529440652.255491"
+            timestampString = "531712898.169639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "getRecordViaApi()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "censeo.ViewController.(getRecordViaApi () -&gt; ()).(closure #1)"
-                  moduleName = "censeo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stanleystevensWhistle/Develop/iOS/censeo/censeo/ViewController.swift"
-                  timestampString = "529439805.919648"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "1129">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "censeo.ViewController.(getRecordViaApi () -&gt; ()).(closure #1)"
-                  moduleName = "censeo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/stanleystevensWhistle/Develop/iOS/censeo/censeo/ViewController.swift"
-                  timestampString = "529439805.92325"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "4558">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
