@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     
     var currentRecordId: String = "0"
     var currentRecordDetails: String = ""
-    var i = 0
+    var expenses = [[String:AnyObject]]()
+    var expenseArray = [[[String:AnyObject]]]();
+    var i = 1
     
     @IBOutlet weak var expenseView: ExpenseView! {
         didSet {
@@ -51,7 +53,6 @@ class ViewController: UIViewController {
         let url = URL(string: "http://www.alexandriaai.com/api/expenses")!
         let task = session.dataTask(with: url) { (data, _, _) -> Void in
             if let data = data {
-                
                 do {
                     let parsedData = try JSONSerialization.jsonObject(with: data, options: []) as! [String:AnyObject]
                     let expenses = parsedData["expenses_array"] as? [[String:AnyObject]]
@@ -70,19 +71,20 @@ class ViewController: UIViewController {
                     let date: String? = currentRecord?["date"] as? String ?? "Null"
                         
                     self.currentRecordDetails = String("\(orig_description!), \(category!), \(date!)")
+                    
+                    self.expenseArray.append(expenses!)
                 } catch  {
                     print(error)
                 }
-                
             }
         }
         task.resume()
     }
     
     func setNext(){
-        let currentRecord = expenses[i]
-        setTitleText(text: currentRecord)
-        setCostText(text: currentRecord)
+        let currentRecord = expenseArray[0][i]
+        setTitleText(text: (currentRecord["description"] as? String)!)
+        setCostText(text: (currentRecord["amount"] as? String)!)
         i = i + 1
     }
     
@@ -96,8 +98,8 @@ class ViewController: UIViewController {
         expenseRecordCost.text = text
     }
     
-    func setDetailsText(){
-        expenseRecordDetails.text = currentRecordDetails
+    func setDetailsText(text: String){
+        expenseRecordDetails.text = text
     }
     
     func setRatedAs(text: String){
@@ -110,16 +112,19 @@ class ViewController: UIViewController {
     
     func rateAsAOne(){
         setRatedAs(text: "1")
+        //updateRecordViaApi()
         setNext()
     }
     
     func rateAsATwo(){
         setRatedAs(text: "2")
+        //updateRecordViaApi()
         setNext()
     }
     
     func rateAsAThree(){
         setRatedAs(text: "3")
+        //updateRecordViaApi()
         setNext()
     }
     
@@ -130,7 +135,13 @@ class ViewController: UIViewController {
     
     func moreDetails(){
         setRatedAs(text: "...")
-        setNext()
+        let currentRecord = i == 0 ? expenseArray[0][i] : expenseArray[0][i-1]
+        let orig_description: String? = currentRecord["original_description"] as? String ?? "Null"
+        let category: String? = currentRecord["category"] as? String ?? "Null"
+        let date: String? = currentRecord["date"] as? String ?? "Null"
+        
+        let detail = String("\(orig_description!), \(category!), \(date!)")
+        setDetailsText(text: detail!)
     }
 }
 

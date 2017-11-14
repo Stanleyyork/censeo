@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "censeo/ViewController.swift"
-            timestampString = "531712898.169639"
+            timestampString = "532314813.545114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "getRecordViaApi()"
             landmarkType = "7">
          </BreakpointContent>
