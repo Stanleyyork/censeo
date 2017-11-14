@@ -50,12 +50,13 @@ class ViewController: UIViewController {
     func getRecordViaApi(){
         // Get record via API (GET)
         let session = URLSession.shared
-        let url = URL(string: "http://www.alexandriaai.com/api/expenses")!
+        //let url = URL(string: "http://www.alexandriaai.com/api/expenses")!
+        let url = URL(string: "http://localhost:3000/api/expenses")!
         let task = session.dataTask(with: url) { (data, _, _) -> Void in
             if let data = data {
                 do {
                     let parsedData = try JSONSerialization.jsonObject(with: data, options: []) as! [String:AnyObject]
-                    let expenses = parsedData["expenses_array"] as? [[String:AnyObject]]
+                    let expenses = parsedData["get_expense_from_db"] as? [[String:AnyObject]]
                     let currentRecord = expenses?.first
                     let currentRecordIdCasted = currentRecord?["id"] as? String ?? "Null"
                     self.currentRecordId = currentRecordIdCasted
@@ -82,10 +83,15 @@ class ViewController: UIViewController {
     }
     
     func setNext(){
-        let currentRecord = expenseArray[0][i]
-        setTitleText(text: (currentRecord["description"] as? String)!)
-        setCostText(text: (currentRecord["amount"] as? String)!)
-        i = i + 1
+        if(expenseArray[0].count == i-1){
+            let currentRecord = expenseArray[0][i]
+            setTitleText(text: (currentRecord["description"] as? String)!)
+            setCostText(text: (currentRecord["amount"] as? String)!)
+            i = i + 1
+        } else {
+            setTitleText(text: "No more!")
+            setCostText(text: "")
+        }
     }
     
     func setTitleText(text: String){
@@ -108,24 +114,46 @@ class ViewController: UIViewController {
     
     func updateRecordViaApi(){
         // Update record via API (PUT)
+        print("Update!")
+        var url : NSURL
+        url = NSURL(string: "http://localhost:3000/api/expenses/1?rating=3")!
+        
+        let request = NSMutableURLRequest(url: url as URL)
+        
+        //if postString != nil {
+            
+            //let postData : NSData = ("rating=2").dataUsingEncoding(NSUTF8StringEncoding)!
+            // create the request
+            request.httpMethod = "PUT"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            //request.HTTPBody = postData
+        //}
+        var connection: NSURLConnection = NSURLConnection(request: request as URLRequest, delegate: self, startImmediately: true)!
     }
     
     func rateAsAOne(){
         setRatedAs(text: "1")
-        //updateRecordViaApi()
-        setNext()
+        if(expenseArray[0].count == i-1){
+            updateRecordViaApi()
+            setNext()
+        }
     }
     
     func rateAsATwo(){
         setRatedAs(text: "2")
-        //updateRecordViaApi()
-        setNext()
+        if(expenseArray[0].count == i-1){
+            updateRecordViaApi()
+            setNext()
+        }
     }
     
     func rateAsAThree(){
         setRatedAs(text: "3")
-        //updateRecordViaApi()
-        setNext()
+        if(expenseArray[0].count == i-1){
+            updateRecordViaApi()
+            setNext()
+        }
     }
     
     func rateLater(){
